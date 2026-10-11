@@ -1,13 +1,27 @@
-source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
+source "https://rubygems.org"
 
-# 本地预览用：使用纯 Jekyll（比 github-pages 全家桶更轻、更快、兼容性更好）
-gem "jekyll", "~> 4.3"
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+# This will help ensure the proper Jekyll version is running.
+# Happy Jekylling!
 
-# Windows 下文件监听需要的 gem
+gem "github-pages", group: :jekyll_plugins
+
+# If you want to use Jekyll native, uncomment the line below.
+# To upgrade, run `bundle update`.
+
+# gem "jekyll"
+
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
+# If you have any plugins, put them here!
 group :jekyll_plugins do
+  # gem "jekyll-archives"
   gem "jekyll-feed"
-  gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
+  gem 'jekyll-sitemap'
+  gem 'hawkins'
 end
